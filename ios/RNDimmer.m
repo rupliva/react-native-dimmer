@@ -11,7 +11,8 @@ RCT_REMAP_METHOD(set, setIdleTimerDisabled:(BOOL)disabled resolver:(RCTPromiseRe
         resolve(result);
     }
     @catch (NSException *exception) {
-        reject(exception);
+      NSError *error = [[NSError alloc] initWithDomain:NSPOSIXErrorDomain code:0 userInfo:nil];
+      reject(@"idle_timer_error", exception.reason, error);
     }
 }
 
