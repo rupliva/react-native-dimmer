@@ -34,7 +34,7 @@ Add `react-native-dimmer` to your `./android/settings.gradle` file as follows:
 
 ```text
 include ':react-native-dimmer'
-project(':react-native-dimmer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-dimmer/android')
+project(':react-native-dimmer').projectDir = new File(settingsDir, '../node_modules/react-native-dimmer/android')
 ```
 
 Include it as dependency in `./android/app/build.gradle` file:
@@ -53,15 +53,12 @@ MainActivity (`./android/app/src/main/java/your/bundle/MainActivity.java`):
 import social.yadi.rndimmer.ReactNativeDimmerPackage;  // <---- import this one
 ...
 @Override
-protected void onCreate(Bundle savedInstanceState) {
-    ...
-    mReactInstanceManager = ReactInstanceManager.builder()
-    .setApplication(getApplication())
-    .addPackage(new ReactNativeDimmerPackage(this))  // <---- add this line
-    .build();
-    ...
+protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+        new MainReactPackage(),
+        new ReactNativeDimmerPackage(this)  // <---- add this line
+    );
 }
-...
 ```
 
 After that, you will need to recompile
