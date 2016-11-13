@@ -1,7 +1,7 @@
 {
   "name": "react-native-dimmer",
   "description": "A plugin that allows you to enable (eventually lock the device) and disable the screen dim in your React Native app.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
