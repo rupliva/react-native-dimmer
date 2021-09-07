@@ -4,6 +4,8 @@ A plugin that allows you to enable (eventually lock the device)
 and disable the screen dim in your React Native app.
 Works in both iOS and Android.
 
+# ⚠️ Unmaintained ⚠️ 
+
 [![github home](https://img.shields.io/badge/YADI%20Social-react--native--dimmer-green.svg?style=flat-square)](https://github.com/yadi-social/react-native-dimmer)
 [![github issues](https://img.shields.io/github/issues/yadi-social/react-native-dimmer.svg?style=flat-square)](https://github.com/yadi-social/react-native-dimmer/issues)
 [![npm version](https://img.shields.io/npm/v/react-native-dimmer.svg?style=flat-square)][npm-package]
